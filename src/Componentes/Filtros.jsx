@@ -1,7 +1,7 @@
 import FiltroGender from "./FiltroGender";
 import FiltroSpecie from "./FiltroSpecie";
 import FiltroStatus from "./FiltroStatus";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 export const Filtros = ({
   gender,
@@ -14,17 +14,19 @@ export const Filtros = ({
   return (
     <Box
       sx={{
-        display: "flex",
+        display: { xs: "block", md: "flex" },
         flexDirection: "column",
-        alignItems: { xs: "center", md: "left" },
+        justifyContent: "center",
+        alignItems: { xs: "center", md: "none" },
         paddingLeft: "10px",
-        paddingTop: "50px",
-        width: { xs: "100%", md: "200px" },
+        paddingTop: "10px",
+        pb: "4px",
         height: "100vh",
-        overflowY: "hidden",
-        overflowX: "hidden",
         background: "#6e9987",
         color: "black",
+        position: { xs: "absolute", md: "fixed" },
+        width: { xs: "100%", md: "20%" },
+        pl: { xs: "220px", md: "0px" },
       }}
     >
       <FiltroStatus status={status} setStatus={setStatus} />

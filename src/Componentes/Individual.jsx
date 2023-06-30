@@ -1,6 +1,7 @@
 import { Avatar, Typography } from "@mui/material";
-import { Box, maxWidth, minWidth } from "@mui/system";
+import { Box } from "@mui/system";
 import { useLoaderData } from "react-router-dom";
+
 export const Individual = () => {
   const { Lista } = useLoaderData();
   return (

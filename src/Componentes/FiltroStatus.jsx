@@ -8,7 +8,12 @@ import FormLabel from "@mui/material/FormLabel";
 export default function RadioButtonsGroup({ status, setStatus }) {
   return (
     <FormControl>
-      <FormLabel id="demo-radio-buttons-group-label">Status</FormLabel>
+      <FormLabel
+        style={{ fontWeight: "600", fontSize: "1.5rem" }}
+        id="demo-radio-buttons-group-label"
+      >
+        Status
+      </FormLabel>
       <RadioGroup
         value={status}
         onChange={(e) => {

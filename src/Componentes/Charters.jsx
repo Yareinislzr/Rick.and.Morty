@@ -2,8 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Lista } from "./Lista";
 import { Pagina } from "./Pagina";
 import { Box } from "@mui/system";
+import Modal from "./Modal";
 
-export const Charters = ({ gender, status, specie }) => {
+export const Charters = ({
+  gender,
+  status,
+  specie,
+  setStatus,
+  setGender,
+  setSpecie,
+}) => {
   const [characters, setCharacters] = useState([]);
 
   const [page, setPage] = useState(1);
@@ -32,24 +40,41 @@ export const Charters = ({ gender, status, specie }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: "100vh",
+        justifyContent: "center",
+        height: "auto",
         backgroundColor: "#e0e4ce",
-        overflowX: "hidden",
         pt: "48px",
       }}
     >
       <Box
         sx={{
-          width: "100%",
+          display: "flex",
         }}
       >
-        <Pagina page={page} setPage={setPage} />
+        <Box
+          sx={{
+            display: { xs: "flex", md: "none" },
+          }}
+        >
+          <Modal
+            gender={gender}
+            setGender={setGender}
+            status={status}
+            setStatus={setStatus}
+            specie={specie}
+            setSpecie={setSpecie}
+          />
+        </Box>
+        <Box>
+          <Pagina page={page} setPage={setPage} />
+        </Box>
       </Box>
       <Box
         sx={{
           display: "flex",
-          width: "100%",
           flexWrap: "Wrap",
+          justifyContent: "center",
+          alignItems: "center",
           gap: "10px",
           padding: "15px",
         }}

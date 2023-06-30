@@ -10,14 +10,15 @@ export const Inicio = () => {
     <Box
       sx={{
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: "center",
-        alignItems: "center",
       }}
     >
       <Box
         sx={{
-          display: { xs: "none", md: "flex" },
-          width: { xs: "100%", md: "auto" },
+          display: { xs: "none", md: "block" },
+          justifyContent: "center",
+          width: "20%",
         }}
       >
         <Filtros
@@ -29,9 +30,17 @@ export const Inicio = () => {
           setSpecie={setSpecie}
         />
       </Box>
-      <Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          width: { xs: "auto", md: "80%" },
+        }}
+      >
         <Charters
           gender={gender}
+          setGender={setGender}
           status={status}
           setStatus={setStatus}
           specie={specie}

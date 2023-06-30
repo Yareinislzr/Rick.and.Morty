@@ -2,16 +2,10 @@ import { Button, TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
-import { Independiente } from "./Independiente";
 
 export const BarraNavegation = () => {
   const [botones, setBotones] = useState();
   const [user, setUser] = useState(true);
-
-  const filtrado = (e) => {
-    setUser(e.target.value);
-    console.log(e.target.value);
-  };
 
   return (
     <Box
@@ -26,7 +20,7 @@ export const BarraNavegation = () => {
     >
       <Box
         sx={{
-          width: "35%",
+          width: "40%",
           marginLeft: "10px",
           p: "3px",
         }}
@@ -52,8 +46,14 @@ export const BarraNavegation = () => {
           </Button>
         </Link>
         <Link to="/Inicio">
-          <Button variant="contained" color="success">
-            Inicio
+          <Button
+            sx={{
+              display: { xs: "none", md: "block", textDecorationLine: "none" },
+            }}
+            variant="contained"
+            color="success"
+          >
+            Filtrar
           </Button>
         </Link>
       </Box>

@@ -11,27 +11,17 @@ export const Lista = ({ characters }) => {
   const navigate = useNavigate();
   return characters.map((item) => {
     return (
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <Box>
         <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+          onClick={() => {
+            navigate("/Individual/" + item.id);
           }}
         >
           <Avatar
             sx={{
               display: "flex",
-              width: "200px",
-              height: " 200px",
+              width: "50mm",
+              height: " 50mm",
               borderRadius: "50%",
               border: borders[item.status.toUpperCase()],
             }}
@@ -45,11 +35,7 @@ export const Lista = ({ characters }) => {
               pb: "4px",
             }}
           >
-            <Typography
-              onClick={() => {
-                navigate("/Individual/" + item.id);
-              }}
-            >
+            <Typography>
               {item.status.toUpperCase()} <br></br>
               {item.name}
             </Typography>
