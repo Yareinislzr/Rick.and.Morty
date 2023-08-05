@@ -9,7 +9,7 @@ export let Pagina = (props) => {
         justifyContent: "space-around",
         alignItems: "center",
         padding: "10px",
-        width: "100%",
+        gap:"5px"
       }}
     >
       <Typography>Page: {props.page} </Typography>

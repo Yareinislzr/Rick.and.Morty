@@ -12,11 +12,12 @@ export const Inicio = () => {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "center",
+        width:"100%"
       }}
     >
       <Box
         sx={{
-          display: { xs: "none", md: "block" },
+          display: { xs: "none", md: "flex" },
           justifyContent: "center",
           width: "20%",
         }}
@@ -35,7 +36,7 @@ export const Inicio = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          width: { xs: "auto", md: "80%" },
+          width: { xs: "100%", md: "80%" },
         }}
       >
         <Charters
