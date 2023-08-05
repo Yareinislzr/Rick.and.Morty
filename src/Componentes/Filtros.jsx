@@ -22,8 +22,9 @@ export const Filtros = ({
         height: "100vh",
         background: "#6e9987",
         color: "black",
+        position: { xs: "absolute", md: "fixed" },
         width: { xs: "100%", md: "20%" },
-        pl: { xs: "120px", md: "0px" },
+        pl: { xs: "220px", md: "0px" },
       }}
     >
       <FiltroStatus status={status} setStatus={setStatus} />
