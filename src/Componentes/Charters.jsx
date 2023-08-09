@@ -42,6 +42,7 @@ export const Charters = ({
         flexDirection: "column",
         justifyContent: "center",
         width:"100%",
+        height:"auto",
         backgroundColor: "#e0e4ce",
         pt: "48px",
       }}

@@ -53,7 +53,7 @@ export const BarraNavegation = () => {
             variant="contained"
             color="success"
           >
-            Filtrar
+            Filter
           </Button>
         </Link>
       </Box>

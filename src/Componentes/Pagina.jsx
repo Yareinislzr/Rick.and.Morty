@@ -12,7 +12,7 @@ export let Pagina = (props) => {
         gap:"5px"
       }}
     >
-      <Typography>Page: {props.page} </Typography>
+      {props.page >= 1?`Page:${props.page} `:""}
       <Box
         sx={{
           display: "flex",
@@ -26,7 +26,7 @@ export let Pagina = (props) => {
             color="success"
             onClick={() => props.setPage(props.page - 1)}
           >
-            Back {props.page}
+            Back 
           </Button>
         ) : (
           ""
@@ -36,7 +36,7 @@ export let Pagina = (props) => {
           color="success"
           onClick={() => props.setPage(props.page + 1)}
         >
-          New Page {props.page}
+          Nex
         </Button>
       </Box>
     </Box>

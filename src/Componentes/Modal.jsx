@@ -51,7 +51,6 @@ export default function Modal({
       >
         <AppBar
           sx={{
-            position: "relative",
             backgroundColor: "#114d4d",
             color: "white",
             width: "100%",
