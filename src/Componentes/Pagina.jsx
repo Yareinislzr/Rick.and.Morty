@@ -20,7 +20,7 @@ export let Pagina = (props) => {
           gap: "10px",
         }}
       >
-        {props.page >= 1 ? (
+        {props.page >=2 ? (
           <Button
             variant="contained"
             color="success"
